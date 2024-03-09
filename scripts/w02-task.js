@@ -5,7 +5,7 @@ document.querySelector('h1').textContent = '¡Wellcome to my page!';
 /* Step 2 - Variables */
 const fullName = 'Danny Manuel Rausseo Leon'; // This is my full name
 const currentYear = new Date().getFullYear();
-const profilePicture = 'images/profilePicture.png'; // It's Me!
+const profilePicture = 'images/images/profile-image.png'; // It's Me!
 
 /* Step 3 - Element Variables */
 const nameElement = document.getElementById('name'); 
