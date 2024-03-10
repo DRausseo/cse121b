@@ -1,0 +1,32 @@
+/* Style for the task list */
+#task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for each task item */
+#task-list li {
+    margin-bottom: 10px;
+}
+
+/* Style for the delete button */
+#task-list button {
+    margin-left: 10px;
+    cursor: pointer;
+    background-color: #dc3545; /* Red background color */
+    color: #fff; /* White text color */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Hover effect for the delete button */
+#task-list button:hover {
+    background-color: #c82333; /* Darker red background color on hover */
+}
+
+/* Style for the task when marked as done */
+.task-done {
+    text-decoration: line-through; /* Strike through the text */
+    color: #007bff; /* Blue text color */
+}

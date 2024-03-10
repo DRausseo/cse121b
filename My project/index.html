@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to do</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Things to do</h1>
+    <input type="text" id="taskInput" class="task-input" placeholder="Add new task">
+    <button id="addTaskBtn" class="add-task-btn">Add Task</button>
+    <ul id="taskList" class="task-list"></ul>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const taskInput = document.getElementById('taskInput');
+            const addTaskBtn = document.getElementById('addTaskBtn');
+            const taskList = document.getElementById('taskList');
+            let tasks = [];
+
+            addTaskBtn.addEventListener('click', function() {
+                const taskText = taskInput.value.trim();
+                if (taskText !== '') {
+                    tasks.push({ text: taskText, done: false });
+                    renderTasks();
+                    taskInput.value = '';
+                }
+            });
+
+            function renderTasks() {
+                taskList.innerHTML = '';
+                tasks.forEach(function(task, index) {
+                    const li = document.createElement('li');
+                    li.textContent = task.text;
+
+                    if (task.done) {
+                        li.classList.add('task-done');
+                    }
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'Delete';
+                    deleteButton.classList.add('delete-button');
+                    deleteButton.addEventListener('click', function() {
+                        tasks.splice(index, 1);
+                        renderTasks();
+                    });
+
+                    const doneButton = document.createElement('button');
+                    doneButton.textContent = 'Done';
+                    doneButton.classList.add('done-button');
+                    doneButton.addEventListener('click', function() {
+                        tasks[index].done = !tasks[index].done;
+                        renderTasks();
+                    });
+
+                    li.appendChild(deleteButton);
+                    li.appendChild(doneButton);
+                    taskList.appendChild(li);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
