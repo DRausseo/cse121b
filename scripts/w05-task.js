@@ -70,7 +70,9 @@ const filterTemples = (temples) => {
     }
 };
 
+getTemples();
+
 /* Event Listener */
 document.querySelector("#filtered").addEventListener("change", () => { filterTemples(templeList) });
 
-getTemples();
+
