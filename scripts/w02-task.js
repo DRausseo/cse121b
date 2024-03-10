@@ -24,18 +24,7 @@ profileImage.setAttribute('alt', `Profile image of ${fullName}`);
 /* Step 5 - Array */
 const favoriteFoods = ['Arepas', 'Hallacas', 'Pan de Jamon', 'Coca Cola', 'Papelon con limon', 'Tajadas de Platano frito', 'Pollo frito', 'Chicha de arroz'];
 
-foodElement.innerHTML = favoriteFoods.join('<br>');
-
-const newFavoriteFood = 'Empanadas con malta';
-favoriteFoods.push(newFavoriteFood);
-
-foodElement.innerHTML += `<br>${newFavoriteFood}`;
-
-favoriteFoods.shift();
-
-foodElement.innerHTML = favoriteFoods.join('<br>');
-
-favoriteFoods.pop();
-
-foodElement.innerHTML = favoriteFoods.join('<br>');
+const foodItems = favoriteFoods.map(food => `<li>${food}</li>`).join('');
+const foodList = document.getElementById('foodList');
+foodList.innerHTML = foodItems;
 
