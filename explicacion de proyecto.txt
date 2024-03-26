@@ -1,0 +1,23 @@
+Project Title: Online Tasks
+
+Purpose:
+The "Online Tasks" application aims to help users manage their tasks in an efficient and organized manner. With this app, users will be able to add, edit, delete, and mark pending tasks as completed, allowing them to keep clear track of their daily responsibilities.
+
+Main Features:
+
+Add Tasks: Users can add new tasks by specifying a title and description.
+Edit Tasks: Users are allowed to edit the title and description of existing tasks.
+Delete Tasks: Users can delete tasks that are no longer necessary.
+Mark Tasks as Completed: Users can mark tasks as completed to indicate that they have been completed.
+Filter Tasks: The ability to filter tasks based on their status (completed or pending) is provided.
+Data Persistence: Tasks will be stored locally in the user's browser so they can access them in future sessions.
+Used technology:
+
+HTML, CSS and JavaScript for the structure, design and functionality of the application.
+Use of Fetch API for data management and communication with the server.
+GitHub Pages to host and deploy the web application.
+Learning objectives:
+
+Practice and apply the fundamental concepts of HTML, CSS and JavaScript.
+Understand and use browser data persistence capabilities.
+Improve web development skills and the ability to build interactive and functional applications.
