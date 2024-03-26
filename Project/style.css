@@ -1,0 +1,40 @@
+/* Estilos para las tareas */
+ul#task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+#task-list li {
+  margin-bottom: 10px;
+}
+
+.completed label {
+  text-decoration: line-through;
+  color: blue; /* Cambio agregado para subrayar en azul */
+}
+
+/* Estilos para el formulario de agregar tarea */
+#add-task-form {
+  margin-bottom: 20px;
+}
+
+#add-task-form input[type="text"],
+#add-task-form textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+#add-task-form input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+#add-task-form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+  
